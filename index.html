@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+         <!-- Fontawesome CDN goes here -->
+    <script
+    src="https://kit.fontawesome.com/ce32527ea4.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+
+<body onload="fetchCategories()"> <!-- html load hole function call -->
+    <header>
+        <!-- Navbar goes here -->
+        <nav class="navbar navbar-expand-lg bg-transparent mt-3">
+            <div class="container">
+                <a class="navbar-brand" href="#"><button class="btn btn-primary rounded-0 fs-5 fw-bold">News</button> Portal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">News</a>
+                        <a class="nav-link" href="#">Blogs</a>
+                        <a class="nav-link" href="#"><img src="./assets/Avatar.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <hr class="container" />
+
+        <!-- category section -->
+        <section class="container categories-container d-flex justify-content-between" id="categories-container">
+
+        </section>
+    </header>
+    <main>
+        <!-- alert section  -->
+        <section class="container my-3">
+            <div class="alert alert-light" role="alert">
+               <span id="news-count">0</span> items found for category <span id="category-name"></span>
+              </div>
+        </section>
+    <!-- sorting section -->
+        <section class="container d-flex justify-content-between my-4" id="sorting-container">
+            <div class="d-flex justify-content-center align-items-center gap-2">
+                <p class="text-nowrap p-0 m-0 ">Sort by:</p>
+             
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Default</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+            
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary" onclick="showTodaysPick()">Todays pick</button>
+                <button class="btn btn-outline-seconday" onclick="showTrendings()">Trending</button>
+            
+            </div>
+
+        </section>
+<!-- all news -->
+    <section class="container" id="all-news">
+       <!-- dynamic card here -->
+    </section>
+<!-- modal here -->
+<section>
+    <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="modal-body" class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
