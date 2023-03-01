@@ -101,7 +101,7 @@ const showNewsDetail = (newsDetail) => {
     <div class= "card mb-3">
     <div class="row g-0">
       <div class="col-md-12">
-        <img src=${image_url} class="img-fluid rounded-start" alt="..." />
+        <img src=${image_url} class="img-fluid rounded-sm" alt="..."  />
       </div>
       <div class="col-md-12 d-flex flex-column">
         <div class="card-body">
@@ -115,7 +115,7 @@ const showNewsDetail = (newsDetail) => {
         <div class="card-footer border-0 bg-body d-flex justify-content-between">
           <div class="d-flex gap-2">
           <img src=${author.img
-      } class="img-fluid rounded-circle" alt="..." height="40" width="40"/>
+      } class="img-fluid rounded-circle" alt="..." height="40" width="60"/>
           <div>
           <p class="m-0 p-0">${author.name ? author.name : "Not available"}</p>
           <p class="m-0 p-0">${author.published_date}</p>
